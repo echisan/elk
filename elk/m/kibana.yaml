@@ -1,0 +1,22 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: kb-single
+spec:
+  replicas: 1
+  template:
+    metadata:
+      namespace: xh-test
+      name: kb-single
+      labels:
+        app: kb-single
+    spec:
+      containers:
+        - name: kb
+          image: docker.elastic.co/kibana/kibana:6.4.0
+          env:
+            - name: ELASTICSEARCH_URL
+              value: "http://es-cluster-svc:9200"
+          ports:
+            - name: http
+              containerPort: 5601

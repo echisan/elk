@@ -1,0 +1,69 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: es-single
+  labels:
+    app: es-single
+spec:
+  selector:
+    matchLabels:
+      app: es-single
+  template:
+    metadata:
+      name: es-single
+      labels:
+        app: es-single
+    spec:
+      containers:
+        - name: es
+          image: docker.elastic.co/elasticsearch/elasticsearch:7.2.0
+          env:
+            - name: network.host
+              value: "_site_"
+            - name: node.name
+              value: "${HOSTNAME}"
+            - name: discovery.zen.ping.unicast.hosts
+              value: "${ES_SINGLE_NODEPORT_SERVICE_HOST}"
+            - name: cluster.name
+              value: "test-single"
+            - name: ES_JAVA_OPTS
+              value: "-Xms128m -Xmx128m"
+          volumeMounts:
+            - name: es-single-data
+              mountPath: /usr/share/elasticsearch/data
+      volumes:
+        - name: es-single-data
+          emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: es-single
+spec:
+  clusterIP: None
+  ports:
+    - port: 9200
+      name: http
+    - port: 9300
+      name: tcp
+  selector:
+    app: es-single
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: es-single-nodeport
+spec:
+  type: NodePort
+  ports:
+    - port: 9200
+      name: http
+      targetPort: 9200
+      nodePort: 31200
+    - port: 9300
+      name: tcp
+      targetPort: 9300
+      nodePort: 31300
+  selector:
+    app: es-single
+
