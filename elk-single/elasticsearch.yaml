@@ -17,23 +17,27 @@ spec:
       containers:
         - name: es
           image: docker.elastic.co/elasticsearch/elasticsearch:7.2.0
+#          env:
+#            - name: network.host
+#              value: "_site_"
+#            - name: node.name
+#              value: "${HOSTNAME}"
+#            - name: discovery.zen.ping.unicast.hosts
+#              value: "${ES_SINGLE_NODEPORT_SERVICE_HOST}"
+#            - name: cluster.name
+#              value: "test-single"
+#            - name: ES_JAVA_OPTS
+#              value: "-Xms128m -Xmx128m"
           env:
-            - name: network.host
-              value: "_site_"
-            - name: node.name
-              value: "${HOSTNAME}"
-            - name: discovery.zen.ping.unicast.hosts
-              value: "${ES_SINGLE_NODEPORT_SERVICE_HOST}"
-            - name: cluster.name
-              value: "test-single"
-            - name: ES_JAVA_OPTS
-              value: "-Xms128m -Xmx128m"
+            - name: discovery.type
+              value: single-node
           volumeMounts:
             - name: es-single-data
               mountPath: /usr/share/elasticsearch/data
       volumes:
         - name: es-single-data
-          emptyDir: {}
+          hostPath:
+            path: /Users/echisan/volumes/elasticsearch
 ---
 apiVersion: v1
 kind: Service
