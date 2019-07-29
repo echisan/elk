@@ -1,0 +1,20 @@
+{"timestamp":"2019-07-29 15:53:13.547", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Starting AppApplication on echisandeMac-mini.local with PID 2760 (/Users/echisan/Desktop/learn-k8s/app/target/classes started by echisan in /Users/echisan/Desktop/learn-k8s/app)"}
+{"timestamp":"2019-07-29 15:53:13.551", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "No active profile set, falling back to default profiles: default"}
+{"timestamp":"2019-07-29 15:53:16.036", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Tomcat initialized with port(s): 8888 (http)"}
+{"timestamp":"2019-07-29 15:53:16.059", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Starting service [Tomcat]"}
+{"timestamp":"2019-07-29 15:53:16.060", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Starting Servlet engine: [Apache Tomcat/9.0.21]"}
+{"timestamp":"2019-07-29 15:53:16.218", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Initializing Spring embedded WebApplicationContext"}
+{"timestamp":"2019-07-29 15:53:16.219", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Root WebApplicationContext: initialization completed in 2604 ms"}
+{"timestamp":"2019-07-29 15:53:16.921", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Initializing ExecutorService 'applicationTaskExecutor'"}
+{"timestamp":"2019-07-29 15:53:17.163", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Exposing 2 endpoint(s) beneath base path '/actuator'"}
+{"timestamp":"2019-07-29 15:53:17.314", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Tomcat started on port(s): 8888 (http) with context path ''"}
+{"timestamp":"2019-07-29 15:53:17.318", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Started AppApplication in 4.485 seconds (JVM running for 5.786)"}
+{"timestamp":"2019-07-29 15:53:17.476", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Initializing Spring DispatcherServlet 'dispatcherServlet'"}
+{"timestamp":"2019-07-29 15:53:17.477", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Initializing Servlet 'dispatcherServlet'"}
+{"timestamp":"2019-07-29 15:53:17.483", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Completed initialization in 6 ms"}
+{"timestamp":"2019-07-29 15:53:34.707", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-1086079329, content=b72a5263-34b4-4646-83f1-e35c1f832ee6)"}
+{"timestamp":"2019-07-29 15:53:35.656", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-1313467469, content=ee50c2f3-f335-46a1-934a-17a4bf19967f)"}
+{"timestamp":"2019-07-29 15:54:38.078", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=449682035, content=76aa7e02-2f66-4842-90c2-88708f0951b4)"}
+{"timestamp":"2019-07-29 15:54:38.743", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-1100996586, content=f6ddd393-6a90-474e-9dd5-a4297724baee)"}
+{"timestamp":"2019-07-29 15:54:39.286", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=2110618793, content=6f5465b1-4181-4a0a-b5fa-4e4528a26ff9)"}
+{"timestamp":"2019-07-29 15:55:03.171", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Shutting down ExecutorService 'applicationTaskExecutor'"}

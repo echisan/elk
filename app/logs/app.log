@@ -1,0 +1,50 @@
+{"timestamp":"2019-07-29 15:55:05.988", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Starting AppApplication on echisandeMac-mini.local with PID 2793 (/Users/echisan/Desktop/learn-k8s/app/target/classes started by echisan in /Users/echisan/Desktop/learn-k8s/app)"}
+{"timestamp":"2019-07-29 15:55:05.991", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "No active profile set, falling back to default profiles: default"}
+{"timestamp":"2019-07-29 15:55:07.190", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Tomcat initialized with port(s): 8888 (http)"}
+{"timestamp":"2019-07-29 15:55:07.209", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Starting service [Tomcat]"}
+{"timestamp":"2019-07-29 15:55:07.209", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Starting Servlet engine: [Apache Tomcat/9.0.21]"}
+{"timestamp":"2019-07-29 15:55:07.290", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Initializing Spring embedded WebApplicationContext"}
+{"timestamp":"2019-07-29 15:55:07.290", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Root WebApplicationContext: initialization completed in 1252 ms"}
+{"timestamp":"2019-07-29 15:55:07.707", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Initializing ExecutorService 'applicationTaskExecutor'"}
+{"timestamp":"2019-07-29 15:55:07.909", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Exposing 2 endpoint(s) beneath base path '/actuator'"}
+{"timestamp":"2019-07-29 15:55:08.059", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Tomcat started on port(s): 8888 (http) with context path ''"}
+{"timestamp":"2019-07-29 15:55:08.062", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Started AppApplication in 2.551 seconds (JVM running for 3.241)"}
+{"timestamp":"2019-07-29 15:55:08.182", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Initializing Spring DispatcherServlet 'dispatcherServlet'"}
+{"timestamp":"2019-07-29 15:55:08.183", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Initializing Servlet 'dispatcherServlet'"}
+{"timestamp":"2019-07-29 15:55:08.188", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Completed initialization in 5 ms"}
+{"timestamp":"2019-07-29 15:55:11.002", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-1385777642, content=88d5f799-886f-4e01-b31b-9e77e1a5a826)"}
+{"timestamp":"2019-07-29 18:00:57.623", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-858944152, content=296d34dc-1fce-489b-9166-7bfc50f7ecf0)"}
+{"timestamp":"2019-07-29 18:00:59.083", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=892589859, content=988777de-db34-4837-9095-78b8d29d3ffc)"}
+{"timestamp":"2019-07-29 18:00:59.921", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-1484141402, content=b85c0771-e785-419f-bab1-2a25a5cc9396)"}
+{"timestamp":"2019-07-29 18:01:00.532", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-2065339643, content=7c08000b-c1f9-43b3-b7f6-e9eb45c98560)"}
+{"timestamp":"2019-07-29 18:01:01.222", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-926310414, content=f2056f05-48e6-4dbc-8528-e6224127f8e1)"}
+{"timestamp":"2019-07-29 18:01:01.802", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-713429793, content=e2f7893d-9e1b-4e5a-b4b3-3c3b0341ca99)"}
+{"timestamp":"2019-07-29 18:01:02.380", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=1260617237, content=ac520bb1-3663-4249-be28-a49a170d91b2)"}
+{"timestamp":"2019-07-29 18:01:02.970", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-667546482, content=c363d2e9-eb9c-4c46-b847-d97323a6f635)"}
+{"timestamp":"2019-07-29 18:01:03.578", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-1995708974, content=cd9df98d-ec24-4c27-8e0b-75394685086e)"}
+{"timestamp":"2019-07-29 18:01:04.145", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=165994880, content=08729db5-daac-4809-bbef-1ca2ba189ff1)"}
+{"timestamp":"2019-07-29 18:01:04.760", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=1573748056, content=e5b0e7a8-35b7-4b82-828a-f46b8a04aa73)"}
+{"timestamp":"2019-07-29 18:01:05.305", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-512322197, content=15437286-9c87-413f-8cc0-569dcadf92f3)"}
+{"timestamp":"2019-07-29 18:01:20.390", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-2100847784, content=a271d00b-b011-474a-8f8f-bf515f068ee8)"}
+{"timestamp":"2019-07-29 18:01:29.929", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-1640796606, content=3916154f-f204-4688-b5fd-18145831b769)"}
+{"timestamp":"2019-07-29 18:01:30.471", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=1477058178, content=5916b071-a95c-42bf-994a-7bca1ee2c6f8)"}
+{"timestamp":"2019-07-29 18:01:30.994", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-1326979249, content=5fc3ea40-f495-4b8f-bb61-063a80a2ac21)"}
+{"timestamp":"2019-07-29 18:01:31.491", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=2041105061, content=ab47876a-1951-4b31-9987-92ed87295b92)"}
+{"timestamp":"2019-07-29 18:01:31.987", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-1436720007, content=101fa94c-2cab-46dd-9190-c88e7383882e)"}
+{"timestamp":"2019-07-29 18:16:25.377", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-101176000, content=3bb41d14-2232-42e1-8c10-0bbc1dea8f02)"}
+{"timestamp":"2019-07-29 18:16:34.359", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-1704966094, content=34095a9f-c9d7-4337-9dd6-15f495d040d6)"}
+{"timestamp":"2019-07-29 18:16:35.404", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=2057283065, content=06e84a50-1c98-4d35-9c0d-cd1574a4c6dc)"}
+{"timestamp":"2019-07-29 18:16:36.352", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=1460006652, content=47a40d31-3679-4a1d-879c-7585376d9a24)"}
+{"timestamp":"2019-07-29 18:16:36.888", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-246588757, content=55be640d-468d-40cb-8b2d-38d1acad6494)"}
+{"timestamp":"2019-07-29 18:16:37.398", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-1062182383, content=79ffdae0-bbe0-430f-ba02-9e3429c2b51d)"}
+{"timestamp":"2019-07-29 18:16:37.893", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-1681473016, content=fd4ccd9b-a0f8-4a37-97e7-262fdca54c04)"}
+{"timestamp":"2019-07-29 18:16:38.374", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=955705068, content=c3486fea-06e6-4abf-95b3-a1100932dbbf)"}
+{"timestamp":"2019-07-29 18:16:38.847", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=2018189916, content=ace57600-d4e2-4885-9a81-3e4f24c4d84e)"}
+{"timestamp":"2019-07-29 18:16:46.405", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=804162288, content=33a5ad47-0258-4024-b424-4ac749ad52c4)"}
+{"timestamp":"2019-07-29 18:16:47.388", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=1612424046, content=0959280e-20c2-49ae-bb2a-3604f63dccf4)"}
+{"timestamp":"2019-07-29 18:16:47.993", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=1774323921, content=ce7db5ab-db2b-4732-a010-63216ce2506d)"}
+{"timestamp":"2019-07-29 18:16:48.527", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=714963735, content=373502cb-a426-43e7-82b7-b85b2ff871a4)"}
+{"timestamp":"2019-07-29 18:16:49.085", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=341632127, content=cb5144e0-087a-4ce6-a576-3501acce27c4)"}
+{"timestamp":"2019-07-29 18:16:49.647", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=704737426, content=7e3b1aec-b781-4d89-9b82-1b91bbcb4186)"}
+{"timestamp":"2019-07-29 18:16:50.183", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-110324704, content=8997d7a2-1795-4188-8949-ddbe3e41ea13)"}
+{"timestamp":"2019-07-29 18:16:50.678", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=2048198798, content=68c8bb64-0aa4-4b4c-a789-6cd81129531e)"}
