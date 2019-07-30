@@ -48,3 +48,4 @@
 {"timestamp":"2019-07-29 18:16:49.647", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=704737426, content=7e3b1aec-b781-4d89-9b82-1b91bbcb4186)"}
 {"timestamp":"2019-07-29 18:16:50.183", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=-110324704, content=8997d7a2-1795-4188-8949-ddbe3e41ea13)"}
 {"timestamp":"2019-07-29 18:16:50.678", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "msg:Message(id=2048198798, content=68c8bb64-0aa4-4b4c-a789-6cd81129531e)"}
+{"timestamp":"2019-07-29 19:08:24.809", "app": "project.name_IS_UNDEFINED", "level": "INFO", "msg": "Shutting down ExecutorService 'applicationTaskExecutor'"}
