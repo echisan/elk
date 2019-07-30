@@ -1,2 +1,4 @@
 .idea
 app/target/
+app/logs/
+app/docker/app.jar
