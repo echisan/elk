@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kibana
+  namespace: xh-test
+spec:
+  selector:
+    matchLabels:
+      app: kibana
+  template:
+    metadata:
+      name: kibana
+      labels:
+        app: kibana
+    spec:
+      containers:
+        - name: kb
+          image: harbor.5aixi.com/xh-test/kibana:7.2.0
+          env:
+            - name: ELASTICSEARCH_HOSTS
+              value: "http://elasticsearch-service:9200"
+          ports:
+            - name: http
+              containerPort: 5601
+      imagePullSecrets:
+        - name: xh-harbor-secret

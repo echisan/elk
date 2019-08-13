@@ -1,0 +1,40 @@
+path.config: /etc/filebeat
+path.logs: /var/log/filebeat
+path.data: /var/lib/filebeat/data
+filebeat.registry.path: /var/lib/filebeat/registry
+filebeat.shutdown_timeout: 0
+logging.level: info
+logging.metrics.enabled: false
+logging.files.rotateeverybytes: 104857600
+logging.files.keepfiles: 10
+logging.files.permissions: 0600
+
+setup.template.name: "filebeat"
+setup.template.pattern: "filebeat-*"
+filebeat:
+  inputs:
+    - type: log
+      enabled: true
+      paths:
+        - /host/var/lib/docker/containers/e96b7442ba13a60ff9dd3d5c646db9fb940123bf54dff7a774e0f70dc16ead85/e96b7442ba13a60ff9dd3d5c646db9fb940123bf54dff7a774e0f70dc16ead85-json.log*
+      scan_frequency: 10s
+      fields_under_root: true
+      docker-json: true
+      fields:
+        index: catalina
+        topic: catalina
+        docker_container: k8s_tomcat_tomcat_default_c27b9fba-b747-11e9-90f5-025000000001_0
+        k8s_container_name: tomcat
+        k8s_node_name: docker-for-desktop
+        k8s_pod: tomcat
+        k8s_pod_namespace: default
+      tail_files: false
+      close_inactive: 2h
+      close_eof: false
+      close_removed: true
+      clean_removed: true
+      close_renamed: false
+
+output.elasticsearch:
+  hosts: ["es-single:9200"]
+  index: filebeat-%{+yyyy.MM.dd}

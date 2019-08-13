@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  namespace: xh-test
+  name: elasticsearch
+  labels:
+    app: elasticsearch
+spec:
+  selector:
+    matchLabels:
+      app: elasticsearch
+  serviceName: elasticsearch-service
+  volumeClaimTemplates:
+    - metadata:
+        name: es-data
+        annotations:
+          volume.beta.kubernetes.io/storage-class: "xh-test-managed-nfs-storage"
+      spec:
+        accessModes:
+          - ReadWriteMany
+        resources:
+          requests:
+            storage: 2Gi
+  template:
+    metadata:
+      labels:
+        app: elasticsearch
+    spec:
+      containers:
+        - name: es
+          image: harbor.5aixi.com/xh-test/elasticsearch:7.2.0
+          env:
+            - name: discovery.type
+              value: single-node
+            - name: ES_JAVA_OPTS
+              value: "-Xms512m -Xmx512m"
+          volumeMounts:
+            - mountPath: /usr/share/elasticsearch/data
+              name: es-data
+      imagePullSecrets:
+        - name: xh-harbor-secret
+
+
+
+
+

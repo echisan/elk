@@ -1,0 +1,33 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: xh-nfs-provisioner
+  namespace: xh-test
+spec:
+  replicas: 2
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: nfs-client-provisioner
+    spec:
+      containers:
+        - env:
+            - name: PROVISIONER_NAME
+              value: fuseim.pri/xh-test
+            - name: NFS_SERVER
+              value: 05e6048c33-cqn37.cn-hangzhou.nas.aliyuncs.com
+            - name: NFS_PATH
+              value: /xh-test
+          image: registry.cn-hangzhou.aliyuncs.com/open-ali/nfs-client-provisioner
+          name: nfs-client-provisioner
+          volumeMounts:
+            - name: nfs-client-root
+              mountPath: /persistentvolumes
+      serviceAccount: default
+      volumes:
+        - name: nfs-client-root
+          nfs:
+            server: 05e6048c33-cqn37.cn-hangzhou.nas.aliyuncs.com
+            path: /xh-test

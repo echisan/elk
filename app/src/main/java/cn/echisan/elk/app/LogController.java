@@ -22,4 +22,9 @@ public class LogController {
         return message;
     }
 
+    @GetMapping("e")
+    public String exception() throws Exception {
+        throw new Exception("test exception");
+    }
+
 }

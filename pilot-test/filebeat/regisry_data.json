@@ -1,0 +1,206 @@
+[
+  {
+    "source": "/host/var/lib/kubelet/pods/1c010c41-b43b-11e9-bfc1-025000000001/volumes/kubernetes.io~empty-dir/tomcat-log/catalina.2019-08-01.log",
+    "offset": 0,
+    "timestamp": "2019-08-01T09:16:44.3750557Z",
+    "ttl": -2,
+    "type": "log",
+    "meta": null,
+    "FileStateOS": {
+      "inode": 2632699,
+      "device": 2049
+    }
+  },
+  {
+    "source": "/host/var/lib/docker/containers/731c8bbce7af25494f29a4b5b92c9c497d74064e00895743443796ff119b002f/731c8bbce7af25494f29a4b5b92c9c497d74064e00895743443796ff119b002f-json.log",
+    "offset": 0,
+    "timestamp": "2019-08-01T07:09:49.9143463Z",
+    "ttl": -2,
+    "type": "log",
+    "meta": null,
+    "FileStateOS": {
+      "inode": 1716394,
+      "device": 2049
+    }
+  },
+  {
+    "source": "/host/var/lib/docker/containers/e43ad3eaf265338b54eded601653d5085f7ee76dfbf3e2e8b4602c28262f7953/e43ad3eaf265338b54eded601653d5085f7ee76dfbf3e2e8b4602c28262f7953-json.log",
+    "offset": 0,
+    "timestamp": "2019-08-01T07:50:58.3176003Z",
+    "ttl": -2,
+    "type": "log",
+    "meta": null,
+    "FileStateOS": {
+      "inode": 1716412,
+      "device": 2049
+    }
+  },
+  {
+    "source": "/host/var/lib/docker/containers/c1a74553fbb50770a21cba36878ff72cc24ed122da25885e2b0449e5f99925d2/c1a74553fbb50770a21cba36878ff72cc24ed122da25885e2b0449e5f99925d2-json.log",
+    "offset": 0,
+    "timestamp": "2019-08-01T09:16:44.3705068Z",
+    "ttl": -2,
+    "type": "log",
+    "meta": null,
+    "FileStateOS": {
+      "inode": 1716440,
+      "device": 2049
+    }
+  },
+  {
+    "source": "/host/var/lib/docker/containers/eddae6812abc5bc5786ee3bc5b1e2c1df82e7493ff368401aba0cf1ae172c998/eddae6812abc5bc5786ee3bc5b1e2c1df82e7493ff368401aba0cf1ae172c998-json.log",
+    "offset": 0,
+    "timestamp": "2019-08-01T09:16:44.3740214Z",
+    "ttl": -2,
+    "type": "log",
+    "meta": null,
+    "FileStateOS": {
+      "inode": 1714681,
+      "device": 2049
+    }
+  },
+  {
+    "source": "/host/var/lib/kubelet/pods/ac0710f3-b446-11e9-bfc1-025000000001/volumes/kubernetes.io~empty-dir/tomcat-log/app.log",
+    "offset": 0,
+    "timestamp": "2019-08-01T10:47:58.4562053Z",
+    "ttl": -2,
+    "type": "log",
+    "meta": null,
+    "FileStateOS": {
+      "inode": 2631716,
+      "device": 2049
+    }
+  },
+  {
+    "source": "/host/var/lib/docker/containers/c5c9c202e91685789c973db1aea51fc6f94d98dfee652165756a570e9032e8b2/c5c9c202e91685789c973db1aea51fc6f94d98dfee652165756a570e9032e8b2-json.log",
+    "offset": 0,
+    "timestamp": "2019-08-01T10:48:58.3903572Z",
+    "ttl": -2,
+    "type": "log",
+    "meta": null,
+    "FileStateOS": {
+      "inode": 1714704,
+      "device": 2049
+    }
+  },
+  {
+    "source": "/host/var/lib/kubelet/pods/f558570f-b449-11e9-bfc1-025000000001/volumes/kubernetes.io~empty-dir/tomcat-log/catalina.2019-08-01.log",
+    "offset": 0,
+    "timestamp": "2019-08-01T10:48:58.3957845Z",
+    "ttl": -2,
+    "type": "log",
+    "meta": null,
+    "FileStateOS": {
+      "inode": 2632712,
+      "device": 2049
+    }
+  },
+  {
+    "source": "/host/var/lib/docker/containers/5e7281500b7a622846e452e271b6e445a53cf63764e74cfccca1be518730341a/5e7281500b7a622846e452e271b6e445a53cf63764e74cfccca1be518730341a-json.log",
+    "offset": 0,
+    "timestamp": "2019-08-02T03:58:43.6969937Z",
+    "ttl": -2,
+    "type": "log",
+    "meta": null,
+    "FileStateOS": {
+      "inode": 1061160,
+      "device": 2049
+    }
+  },
+  {
+    "source": "/host/var/lib/docker/containers/f60383ab767813a0dd91b6245e071f22959120bda52ffbb1e56e6da554f84859/f60383ab767813a0dd91b6245e071f22959120bda52ffbb1e56e6da554f84859-json.log",
+    "offset": 0,
+    "timestamp": "2019-08-02T04:01:13.5406414Z",
+    "ttl": -2,
+    "type": "log",
+    "meta": null,
+    "FileStateOS": {
+      "inode": 1061141,
+      "device": 2049
+    }
+  },
+  {
+    "source": "/host/var/lib/kubelet/pods/250d3a5c-b4da-11e9-9318-025000000001/volumes/kubernetes.io~empty-dir/myapp-log/app.log",
+    "offset": 0,
+    "timestamp": "2019-08-02T04:01:13.5430086Z",
+    "ttl": -2,
+    "type": "log",
+    "meta": null,
+    "FileStateOS": {
+      "inode": 2631725,
+      "device": 2049
+    }
+  },
+  {
+    "source": "/host/var/lib/docker/containers/4193f44e7c6da49f40a12102b2c46c407bac9dcc395dcdbefe9abdf09c0a4178/4193f44e7c6da49f40a12102b2c46c407bac9dcc395dcdbefe9abdf09c0a4178-json.log",
+    "offset": 0,
+    "timestamp": "2019-08-02T08:44:49.2641405Z",
+    "ttl": -2,
+    "type": "log",
+    "meta": null,
+    "FileStateOS": {
+      "inode": 1061139,
+      "device": 2049
+    }
+  },
+  {
+    "source": "/host/var/lib/kubelet/pods/ba3dd5d9-b51a-11e9-9319-025000000001/volumes/kubernetes.io~empty-dir/test-app-log/app.log",
+    "offset": 1762,
+    "timestamp": "2019-08-05T01:19:51.2892352Z",
+    "ttl": -2,
+    "type": "log",
+    "meta": null,
+    "FileStateOS": {
+      "inode": 2635925,
+      "device": 2049
+    }
+  },
+  {
+    "source": "/host/var/lib/kubelet/pods/bc8a5b66-b51a-11e9-9319-025000000001/volumes/kubernetes.io~empty-dir/tomcat-log/catalina.2019-08-02.log",
+    "offset": 5542,
+    "timestamp": "2019-08-05T01:18:09.2667824Z",
+    "ttl": -2,
+    "type": "log",
+    "meta": null,
+    "FileStateOS": {
+      "inode": 2635901,
+      "device": 2049
+    }
+  },
+  {
+    "source": "/host/var/lib/kubelet/pods/bc8a5b66-b51a-11e9-9319-025000000001/volumes/kubernetes.io~empty-dir/tomcat-log/catalina.2019-08-05.log",
+    "offset": 5708,
+    "timestamp": "2019-08-05T01:19:51.2892352Z",
+    "ttl": -2,
+    "type": "log",
+    "meta": null,
+    "FileStateOS": {
+      "inode": 2635919,
+      "device": 2049
+    }
+  },
+  {
+    "source": "/host/var/lib/kubelet/pods/7d670ac0-b731-11e9-90f5-025000000001/volumes/kubernetes.io~empty-dir/tomcat-log/catalina.2019-08-05.log",
+    "offset": 5501,
+    "timestamp": "2019-08-05T03:31:33.820269Z",
+    "ttl": -2,
+    "type": "log",
+    "meta": null,
+    "FileStateOS": {
+      "inode": 2635884,
+      "device": 2049
+    }
+  },
+  {
+    "source": "/host/var/lib/kubelet/pods/57e331c3-b759-11e9-90f5-025000000001/volumes/kubernetes.io~empty-dir/tomcat-log/catalina.2019-08-05.log",
+    "offset": 5500,
+    "timestamp": "2019-08-05T08:16:45.1258497Z",
+    "ttl": -1,
+    "type": "log",
+    "meta": null,
+    "FileStateOS": {
+      "inode": 2635873,
+      "device": 2049
+    }
+  }
+]

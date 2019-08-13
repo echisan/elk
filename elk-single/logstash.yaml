@@ -1,0 +1,113 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: logstash-config
+  labels:
+    app: logging
+    component: logstash
+data:
+  logstash.conf: |
+    input {
+      beats {
+        port => 5044
+      }
+    }
+
+    filter {
+
+        if [logtype] == "springboot" {
+          json {
+            source => "message"
+          }
+          multiline {
+            pattern => '^\s*({")'
+            negate => true
+            what => "previous"
+          }
+        }
+    }
+
+    output {
+      elasticsearch {
+        hosts => ["es-single:9200"]
+        manage_template => false
+        index => "%{[index]}-%{[@metadata][version]}-%{+YYYY.MM.dd}"
+      }
+      stdout {
+        codec => "rubydebug"
+      }
+    }
+
+  logstash.yml: |
+    http.host: "0.0.0.0"
+    xpack.monitoring.enabled: false
+    xpack.monitoring.elasticsearch.hosts: [ "http://es-single:9200" ]
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logstash
+  labels:
+    app: logstash
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: logstash
+  template:
+    metadata:
+      name: logstash
+      labels:
+        app: logstash
+    spec:
+      containers:
+        - name: logstash
+          image: echisan/logstash:with-filter-multiline
+          env:
+            - name: LS_JAVA_OPTS
+              value: "-Xms512m -Xmx512m"
+            - name: LS_OPTS
+              value: "--config.reload.automatic --config.reload.interval 20"
+          ports:
+            - containerPort: 5044
+              name: filebeat
+            - containerPort: 9600
+              name: logstash
+          volumeMounts:
+            - mountPath: /usr/share/logstash/pipeline/logstash.conf
+              name: config-pipline
+              subPath: logstash.conf
+            - mountPath: /usr/share/logstash/config/logstash.yml
+              name: config
+              subPath: logstash.yml
+      restartPolicy: Always
+      volumes:
+        - name: config
+          configMap:
+            name: logstash-config
+            items:
+              - key: logstash.yml
+                path: logstash.yml
+        - name: config-pipline
+          configMap:
+            name: logstash-config
+            items:
+              - key: logstash.conf
+                path: logstash.conf
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: logstash
+spec:
+  ports:
+    - port: 9600
+      targetPort: 9600
+      name: logstash
+      protocol: TCP
+    - port: 5044
+      targetPort: 5044
+      name: filebeat
+      protocol: TCP
+  selector:
+    app: logstash

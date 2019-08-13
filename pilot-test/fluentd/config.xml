@@ -1,0 +1,61 @@
+<root>
+    <source>
+        @type tail
+        @log_level debug
+        tag docker.b7fa1fd870017365491c75fa48bc4e48fbd1f9038a1d85ed4ca043a28e08afc1.access
+        path /host/var/lib/kubelet/pods/f9f7d22e-b81f-11e9-9797-025000000001/volumes/kubernetes.io~empty-dir/tomcat-log/catalina.*.log
+        <parse>
+            @type nonex
+            time_key _timestamp
+            estimate_current_event true
+            keep_time_key true
+        </parse>
+        read_from_head true
+        pos_file /pilot/pos/b7fa1fd870017365491c75fa48bc4e48fbd1f9038a1d85ed4ca043a28e08afc1.access.pos
+    </source>
+    <filter docker.b7fa1fd870017365491c75fa48bc4e48fbd1f9038a1d85ed4ca043a28e08afc1.access>
+        @type record_transformer
+        enable_ruby true
+        <record>
+            host "#{Socket.gethostname}"
+            index access
+            topic access
+            _target access-${time.strftime('%Y.%m.%d')}
+            docker_container k8s_tomcat_tomcat_default_f9f7d22e-b81f-11e9-9797-025000000001_0
+            k8s_container_name tomcat
+            k8s_node_name docker-for-desktop
+            k8s_pod tomcat
+            k8s_pod_namespace default
+        </record>
+    </filter>
+
+    <source>
+        @type tail
+        @log_level debug
+        tag docker.b7fa1fd870017365491c75fa48bc4e48fbd1f9038a1d85ed4ca043a28e08afc1.catalina
+        path /host/var/lib/docker/containers/b7fa1fd870017365491c75fa48bc4e48fbd1f9038a1d85ed4ca043a28e08afc1/b7fa1fd870017365491c75fa48bc4e48fbd1f9038a1d85ed4ca043a28e08afc1-json.log
+        <parse>
+            @type json
+            time_format %Y-%m-%dT%H:%M:%S.%NZ
+            keep_time_key true
+        </parse>
+        read_from_head true
+        pos_file /pilot/pos/b7fa1fd870017365491c75fa48bc4e48fbd1f9038a1d85ed4ca043a28e08afc1.catalina.pos
+    </source>
+
+    <filter docker.b7fa1fd870017365491c75fa48bc4e48fbd1f9038a1d85ed4ca043a28e08afc1.catalina>
+        @type record_transformer
+        enable_ruby true
+        <record>
+            host "#{Socket.gethostname}"
+            index catalina
+            topic catalina
+            _target catalina-${time.strftime('%Y.%m.%d')}
+            docker_container k8s_tomcat_tomcat_default_f9f7d22e-b81f-11e9-9797-025000000001_0
+            k8s_container_name tomcat
+            k8s_node_name docker-for-desktop
+            k8s_pod tomcat
+            k8s_pod_namespace default
+        </record>
+    </filter>
+</root>

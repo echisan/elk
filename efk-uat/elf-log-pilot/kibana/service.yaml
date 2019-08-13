@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kibana-service
+  namespace: xh-test
+spec:
+  clusterIP: None
+  ports:
+    - port: 5601
+      name: http
+  selector:
+    app: kibana
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kibana-nodeport-service
+  namespace: xh-test
+spec:
+  type: NodePort
+  ports:
+    - port: 5601
+      name: http
+      targetPort: 5601
+      nodePort: 32601
+  selector:
+    app: kibana

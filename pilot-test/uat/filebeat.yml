@@ -1,0 +1,23 @@
+path.config: /etc/filebeat
+path.logs: /var/log/filebeat
+path.data: /var/lib/filebeat/data
+filebeat.registry.path: /var/lib/filebeat/registry
+filebeat.shutdown_timeout: 0
+logging.level: info
+logging.metrics.enabled: false
+logging.files.rotateeverybytes: 104857600
+logging.files.keepfiles: 10
+logging.files.permissions: 0600
+
+setup.template.name: "filebeat"
+setup.template.pattern: "filebeat-*"
+filebeat.config:
+    inputs:
+        enabled: true
+        path: ${path.config}/prospectors.d/*.yml
+        reload.enabled: true
+        reload.period: 10s
+
+output.elasticsearch:
+  hosts: ["es-single:9200"]
+  index: filebeat-%{+yyyy.MM.dd}

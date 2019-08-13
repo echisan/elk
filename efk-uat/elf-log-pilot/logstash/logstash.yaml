@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logstash
+  namespace: xh-test
+  labels:
+    app: logstash
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: logstash
+  template:
+    metadata:
+      name: logstash
+      labels:
+        app: logstash
+    spec:
+      containers:
+        - name: logstash
+#          image: harbor.5aixi.com/xh-test/logstash:7.2.0
+          image: logstash:7.2.0
+          env:
+            - name: LS_JAVA_OPTS
+              value: "-Xms512m -Xmx512m"
+            - name: LS_OPTS
+              value: "--config.reload.automatic --config.reload.interval 20"
+          ports:
+            - containerPort: 5044
+              name: filebeat
+            - containerPort: 9600
+              name: logstash
+          volumeMounts:
+            - mountPath: /usr/share/logstash/pipeline/logstash.conf
+              name: config-pipline
+              subPath: logstash.conf
+            - mountPath: /usr/share/logstash/config/logstash.yml
+              name: config
+              subPath: logstash.yml
+      restartPolicy: Always
+      volumes:
+        - name: config
+          configMap:
+            name: logstash-config
+            items:
+              - key: logstash.yml
+                path: logstash.yml
+        - name: config-pipline
+          configMap:
+            name: logstash-config
+            items:
+              - key: logstash.conf
+                path: logstash.conf
+#      imagePullSecrets:
+#        - name: xh-harbor-secret

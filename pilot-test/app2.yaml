@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: json-app
+  labels:
+    app: json-app
+spec:
+  tolerations:
+    - key: "node-role.kubernetes.io/master"
+      effect: "NoSchedule"
+  containers:
+    - name: json-app
+      image: "echisan/app:v4-fix-log-path"
+      ports:
+        - containerPort: 8888
+      env:
+        - name: aliyun_logs_json-app
+          value: "/log/json/*.log"
+        - name: aliyun_logs_json-app_tags
+          value: "logtype=springboot"
+#        - name: aliyun_logs_json-app_format
+#          value: "json"
+      volumeMounts:
+        - mountPath: /log/json
+          name: test-app-log
+  volumes:
+    - name: test-app-log
+      emptyDir: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: json-app-service
+spec:
+  type: NodePort
+  ports:
+    - port: 8888
+      targetPort: 8888
+      nodePort: 31085
+  selector:
+    app: json-app

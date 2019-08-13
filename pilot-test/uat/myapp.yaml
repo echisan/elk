@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+  namespace: xh-test
+  labels:
+    app: my-app
+spec:
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      name: my-app
+      namespace: xh-test
+      labels:
+        app: my-app
+    spec:
+      tolerations:
+        - key: "node-role.kubernetes.io/master"
+          effect: "NoSchedule"
+      containers:
+        - name: my-app
+          image: "echisan/elk-app:v1"
+          env:
+    #        - name: aliyun_logs_app
+    #          value: "stdout"
+            - name: aliyun_logs_myapp_format
+              value: json
+            - name: aliyun_logs_myapp
+              value: "/logs/*.log"
+          volumeMounts:
+            - mountPath: logs
+              name: myapp-log
+      volumes:
+        - name: myapp-log
+          emptyDir: {}
+
